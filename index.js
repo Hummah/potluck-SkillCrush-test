@@ -45,24 +45,24 @@ let guestMax= function(){
     }
 };
 
-// let dishes= function(){
-//     let potlukItems = ["potato salad","rass malai","biryani","juice","white chicken","beef pulao","pizza","white sauce pasta","chicken roast","lazaniya"];
-//     let allGuest =  document.querySelectorAll(".guest-list li")
-//     for (let guest of allGuest){
-// let randomPotlukIndex=Math.floor(Math.random() * potlukItems.length);
-// let randomPotluk = potlukItems[randomPotlukIndex];
-// // console.log(randomPotluk);
-//     let li = document.createElement("li")
-//     li.innerText= `${guest.innerText} bring ${randomPotluk}`
-//     assignItems.append(li);
-// potlukItems.splice(randomPotlukIndex,1)
-//     }
-// };
-// assignButton.onclick=()=>{
-// dishes();
-// // to prevent same dish brought by two or more
-// assignButton.disabled=true;
-// footer.classList.remove("hide");
-// refresh.classList.remove("hide");
-// };
+let dishes= function(){
+    let potlukItems = ["potato salad","rass malai","biryani","juice","white chicken","beef pulao","pizza","white sauce pasta","chicken roast","lazaniya"];
+    let allGuest =  document.querySelectorAll(".guest-list li")
+    for (let guest of allGuest){
+let randomPotlukIndex=Math.floor(Math.random() * potlukItems.length);
+let randomPotluk = potlukItems[randomPotlukIndex];
+// console.log(randomPotluk);
+    let li = document.createElement("li")
+    li.innerText= `${guest.innerText} bring ${randomPotluk}`
+    assignItems.append(li);
+potlukItems.splice(randomPotlukIndex,1)
+    }
+};
+assignButton.onclick=()=>{
+dishes();
+// to prevent same dish brought by two or more
+assignButton.disabled=true;
+footer.classList.remove("hide");
+refresh.classList.remove("hide");
+};
 
